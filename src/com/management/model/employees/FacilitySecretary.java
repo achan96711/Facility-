@@ -1,20 +1,25 @@
 package com.management.model.employees;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import com.management.model.customer.Customer;
+import com.management.model.facilities.Warehouse;
 
 
-public class FacilitySecretary extends Employee {
+public class FacilitySecretary extends ManagementEmployee {
 
-	private ArrayList<String> facilities = new ArrayList<String>();
+	private WarehouseManager warehouseManager;
 	
-	public void addNewfacility(String facName) {
-		facilities.add(facName);
+	public void addNewfacility(Warehouse w) {
+		warehouseManager.addNewFacility(w);
 	}
 	public void removeFacility(String r) {
-		facilities.remove(r);
+		warehouseManager.removeFacility(r);
 	}
 	
-	public void assignFacilityToUse(String facilities) {
-		Customer.setFacilityAssigned(facilities);
+	public void assignFloor(List<String> floors) {
+		Customer customer = new Customer();
+		customer.setFloorsAssignments(floors);
 	}
 }

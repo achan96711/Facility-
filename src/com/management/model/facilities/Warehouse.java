@@ -3,7 +3,8 @@ package com.management.model.facilities;
 import java.util.*;
 
 public class Warehouse implements ConcreteFacilityI {
- private ArrayList<String> facilityInfo = new ArrayList<String>();
+ 
+ ArrayList<String> facilityInfo = new ArrayList<String>();
  private int capacity;
  private String facilityDetail;
  
@@ -31,10 +32,12 @@ public class Warehouse implements ConcreteFacilityI {
 	 facilityInfo.remove(f);
  }
  
- public void getFacilityInformation() {
+ public String getFacilityInformation() {
+	 String facInfo = "";
 	 for(int i = 0; i < facilityInfo.size(); i++) {
-		 System.out.println(facilityInfo.get(i));
+		 facInfo = facilityInfo.get(i);
 	 }
+	 return facInfo;
  }
  
 }
