@@ -1,28 +1,34 @@
 package com.management.model.owner;
 
+import java.util.ArrayList;
+
+import com.management.model.employees.WarehouseManager;
+
 public class NonEmployeeOwner implements OwnerI {
 
+	int cost = 100;
 	@Override
-	public void listFacilityProblems() {
-		// TODO Auto-generated method stub
-		
-	}
+	public ArrayList<String> listFacilityProblems() {
+		OwnerEmployee ownEmp = new OwnerEmployee();
+		return ownEmp.getProblems();
+		}
 
 	@Override
 	public double calcMaintenanceCostForFacility() {
-		// TODO Auto-generated method stub
-		return 0;
+		return cost;
 	}
 
 	@Override
 	public double calcProblemRateForFacility() {
-		// TODO Auto-generated method stub
-		return 0;
+		OwnerEmployee ownEmp = new OwnerEmployee();
+		double rate = ownEmp.getProblems().size()/100;
+		return rate;
 	}
 
 	@Override
-	public void listFacilities() {
-		// TODO Auto-generated method stub
+	public int listFacilities() {
+		WarehouseManager whouse = new WarehouseManager();
+		return whouse.getFacilitiesSize();
 		
 	}
 

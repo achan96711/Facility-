@@ -24,7 +24,8 @@ public class ManagementEmployee extends Employee {
 	//Calculate usage rate
 	public double calcUsageRate(int daysInUse) {
 		usageRate = daysInUse/365;
-		return usageRate;
+		System.out.println("Usage rate is " + usageRate*100 + "%");
+		return usageRate*100;
 	}
 	//Uses for loop to remove vacated facility
 	public void vacateFloor(Warehouse vacatedFacility) {

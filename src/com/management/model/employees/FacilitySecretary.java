@@ -6,8 +6,7 @@ import java.util.List;
 import com.management.model.customer.Customer;
 import com.management.model.facilities.Warehouse;
 
-
-public class FacilitySecretary extends ManagementEmployee {
+ public class FacilitySecretary extends ManagementEmployee {
 
 	private WarehouseManager warehouseManager;
 	

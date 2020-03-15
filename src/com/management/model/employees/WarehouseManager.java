@@ -12,9 +12,12 @@ public class WarehouseManager extends ManagementEmployee {
 	public void addNewFacility(Warehouse facilityDetail) {
 		facilities.add(facilityDetail);
 }
-	public void removeFacility(String facilityDetail) {
+	public void removeFacility(Warehouse facilityDetail) {
 	facilities.remove(facilityDetail);
 }
+	public int getFacilitiesSize() {
+		return facilities.size();
+	}
 
 	public int getDaysInUse() {
 	return daysInUse;
@@ -30,8 +33,11 @@ public class WarehouseManager extends ManagementEmployee {
 }
 
 	public double calcUsageRate(int daysInUse) {
-	return daysInUse/365;
-}
+		double usage = daysInUse;
+		double rate = usage/365;
+		System.out.println("Usage rate is " + Math.round((rate*100)*100) / 100.0 + "% of the year.");
+		return Math.round((rate*100)* 100) / 100.0;
+	}
 
 	public void vacateFloor(Warehouse vacatedFacility) {
 		for (int i = 0; i <= facilities.size(); i++) {

@@ -1,8 +1,10 @@
 package com.management.model.owner;
 
+import java.util.ArrayList;
+
 public interface OwnerI {
-void listFacilityProblems();
+ArrayList<String> listFacilityProblems();
 double calcMaintenanceCostForFacility();
 double calcProblemRateForFacility();
-void listFacilities();
+int listFacilities();
 }

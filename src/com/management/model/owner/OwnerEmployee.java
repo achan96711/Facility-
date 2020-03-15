@@ -22,7 +22,9 @@ public void addProblem(String p) {
 public void removeProblem(String p) {
 	problems.remove(p);
 }
-
+public ArrayList<String> getProblems() {
+	return problems;
+}
 public ArrayList<String> listFacilityProblems(){
 	return problems;
 }
