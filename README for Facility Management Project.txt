@@ -1,0 +1,10 @@
+README for Facility Management Project
+
+Presentation is separate from business logic and lives in the View package.
+
+To run our application, click the ’run as’ button from the project menu and run as java application. Follow the instructions to add a facility or exit the program. Follow the instructions to check the usage rate, and you can even add a new floor to ‘being used’ by following prompts in the console. Comments should be useful to users.
+
+To run tests, go to FacilityTest.java and click run. All tests should pass based on the parameters you enter for the assert methods. You can test our usage of certain parameters as an example. All tests pass. Comments should be useful to users.
+
+More Information on design decisions:
+For our project we wanted the program to be extensible to companies who had a hands-on owner and companies who had a hands-off owner. To do this we created a non-employee owner class and an employee owner class. We took a similar approach when creating our warehouse manager class. Warehouse manager extends management employee because all employees shouldn’t have access to the same methods. If we were to create a lower level employee class, it wouldn’t extend management employee. However, all employees have the capability to make maintenance requests as they should be through the Employee abstract class. Our facility secretary class is the class that adds new facilities, removes facilities, and can assign facilities to clients. Vacating the floor for any reason would be done by the warehouse manager. Our design focuses on one multi-level facility that rents out floors to clients. We created a single level facility class to make it extensible to different kinds of facilities. Lastly, we created a customer class that implements a customer interface that has information for first and last name and getting floor assignments/setting floor assignments. The facilities client in the view package is where methods are called and input is taken through the console. Our project has tests that test certain methods.
