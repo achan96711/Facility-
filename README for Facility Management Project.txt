@@ -1,8 +1,8 @@
-README for Facility Management Project
+README for Facility Management Project (Spring Framework Project 2)
 
 Presentation is separate from business logic and lives in the View package.
 
-To run our application, click the ’run as’ button from the project menu and run as java application. Follow the instructions to add a facility or exit the program. Follow the instructions to check the usage rate, and you can even add a new floor to ‘being used’ by following prompts in the console. Comments should be useful to users.
+To run our application, click the ’run as’ button from the project menu and run as java application. The FacilitiesClient class should be running. You should see the Application Context being instantiated by the spring framework and the XML in the META-INF2 folder. Information should appear in the console that is printed through dependency injection using spring. Follow the instructions to do more, like add a facility. Follow the instructions to check the usage rate, and you can even add a new floor to ‘being used’ by following prompts in the console. Comments should be useful to users.
 
 To run tests, go to FacilityTest.java and click run. All tests should pass based on the parameters you enter for the assert methods. You can test our usage of certain parameters as an example. All tests pass. Comments should be useful to users.
 

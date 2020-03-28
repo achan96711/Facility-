@@ -1,13 +1,13 @@
 package com.management.model.customer;
 
-import java.util.List;
-
 public interface CustomerI {
-String getFirstName(); 
-String getLastName();
-void setFirstName(String s); 
-void setLastName(String s);
-List<String> getFloorsAssignments();
-void setFloorsAssignments(List<String> s);
-
+	
+	public AddressI getFacilityAddress();
+	public void setFacilityAddress(AddressI facilityAddress);
+	public String getCustomerId();
+	public void setCustomerId(String id);
+	public String getLastName();
+	public void setLastName(String lastName);
+	public String getFirstName();
+	public void setFirstName(String firstName);
 }
